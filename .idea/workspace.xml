@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e923949-fadd-4aa7-a81b-db7ca480d743" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlasterGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Asteroid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BlasterGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/space.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/spaceship.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MenuPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asteroid.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asteroidlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/spaceshiptransparent.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Asteroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlasterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlasterGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,14 +39,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/900ra/IdeaProjects/BlasterGame/src"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\900ra\IdeaProjects\BlasterGame\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\900ra\IdeaProjects\BlasterGame\src" />
       <recent name="C:\Users\10018879\IdeaProjects\BlasterGame\src" />
     </key>
   </component>

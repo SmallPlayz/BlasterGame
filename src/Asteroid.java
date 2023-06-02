@@ -6,20 +6,28 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Asteroid extends JLabel {
+public class Asteroid extends JLabel implements Runnable{
 
-    private final int Width = 50;
-    private final int Height = 119;
+    private final int width = 50;
+    private final int height = 119;
+    private boolean isDestroyed = false;
 
-    Asteroid() throws IOException {
-        setBounds(0 ,0, Width, Height);
+    Asteroid(int x) throws IOException {
+        setBounds(x ,0, width, height);
 
-        URL asteroidUrl = new URL("https://i.ibb.co/swtv5Gp/Asteroid.png");
-        BufferedImage asteroidImage = ImageIO.read(asteroidUrl);
-        BufferedImage a = resize(asteroidImage, Width, Height);
-        ImageIcon asteroidImageIcon = new ImageIcon(a);
+        try {
+            URL asteroidUrl = new URL("https://i.ibb.co/swtv5Gp/Asteroid.png");
+            BufferedImage asteroidImage = ImageIO.read(asteroidUrl);
+            BufferedImage a = resize(asteroidImage, width, height);
+            ImageIcon asteroidImageIcon = new ImageIcon(a);
+            setIcon(asteroidImageIcon);
+        } catch (IOException e) {
+            setOpaque(true);
+            throw new RuntimeException(e);
+        }
 
-        setIcon(asteroidImageIcon);
+        Thread thread = new Thread(this);
+        thread.start();
     }
     public static BufferedImage resize(BufferedImage img, int newW, int newH) {
         Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
@@ -30,5 +38,25 @@ public class Asteroid extends JLabel {
         g2d.dispose();
 
         return dimg;
+    }
+
+    @Override
+    public void run() {
+        while (getY() < 650) {
+            try {
+                setLocation(getX(), getY()+1);
+                Thread.sleep(5);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public boolean isDestroyed() {
+        return isDestroyed;
+    }
+
+    public void setDestroyed(boolean destroyed) {
+        isDestroyed = destroyed;
     }
 }
