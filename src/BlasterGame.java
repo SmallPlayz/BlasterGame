@@ -64,7 +64,11 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
                     spaceship.setLocation(Math.min(mouseX - spaceshipWidth, frameWidth - spaceshipWidth), spaceship.getLocation().y);
             }
         });
-        
+
+        CollisionDetection collisionDetection = new CollisionDetection();
+        Thread collisionThread = new Thread(collisionDetection);
+        collisionThread.start();
+
         frame.setVisible(true);
     }
     @Override
@@ -92,6 +96,31 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
                 Thread.sleep(delay);
             } catch (IOException | InterruptedException e) {
                 throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private class CollisionDetection extends Thread{
+        public void run() {
+            int hit = 0;
+            while (hit < 3) {
+                for (Component component : frame.getContentPane().getComponents()) {
+                    if (component instanceof Asteroid) {
+                        Asteroid asteroid = (Asteroid) component;
+
+                        Rectangle spaceshipBounds = spaceship.getBounds();
+                        Rectangle asteroidBounds = asteroid.getBounds();
+
+                        if (spaceshipBounds.intersects(asteroidBounds)) {
+                            hit++;
+                            asteroid.setVisible(true);
+                            frame.getContentPane().remove(asteroid);
+                            frame.getContentPane().revalidate();
+                            frame.getContentPane().repaint();
+                            break;
+                        }
+                    }
+                }
             }
         }
     }
