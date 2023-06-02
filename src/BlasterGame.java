@@ -24,6 +24,8 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
         frame.setResizable(false);
         frame.setLayout(null);
 
+        frame.add(new Projectile(300));
+
         frame.getContentPane().setBackground(Color.BLACK);
 
         ImageIcon icon = new ImageIcon("src/asteroidlogo.png");

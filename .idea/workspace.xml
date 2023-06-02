@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e923949-fadd-4aa7-a81b-db7ca480d743" name="Changes" comment="I did stuff">
-      <change afterPath="$PROJECT_DIR$/src/Projectile.java" afterDir="false" />
+    <list default="true" id="7e923949-fadd-4aa7-a81b-db7ca480d743" name="Changes" comment="done for today!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BlasterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlasterGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projectile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +31,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/900ra/IdeaProjects/BlasterGame/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/900ra/IdeaProjects/BlasterGame/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -75,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685674266880</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="done for today!!">
+      <created>1685675649775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685675649775</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I did stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="I did stuff" />
+    <MESSAGE value="done for today!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="done for today!!" />
   </component>
 </project>
