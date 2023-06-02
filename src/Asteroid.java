@@ -42,7 +42,8 @@ public class Asteroid extends JLabel implements Runnable{
 
     @Override
     public void run() {
-        while (getY() < 650) {
+        BlasterGame.Threads++;
+        while (getY() < 650 && !isDestroyed) {
             try {
                 setLocation(getX(), getY()+1);
                 Thread.sleep(5);
@@ -50,10 +51,7 @@ public class Asteroid extends JLabel implements Runnable{
                 throw new RuntimeException(e);
             }
         }
-    }
-
-    public boolean isDestroyed() {
-        return isDestroyed;
+        BlasterGame.Threads--;
     }
 
     public void setDestroyed(boolean destroyed) {

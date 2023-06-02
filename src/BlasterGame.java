@@ -1,20 +1,18 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
-public class BlasterGame extends Thread implements MenuPanel.StartButtonClickListener{
-    private JFrame frame;
+public class BlasterGame extends Thread implements MenuPanel.StartButtonClickListener, MouseListener {
+    public static JFrame frame;
     private MenuPanel menuPanel;
-    private String difficulty = "easy";
+    private String difficulty = "Easy";
     private JLabel spaceship;
+    public static int Threads = 0;
 
     BlasterGame() {
         frame = new JFrame("Asteroid Blaster Game");
@@ -24,7 +22,7 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
         frame.setResizable(false);
         frame.setLayout(null);
 
-        frame.add(new Projectile(300));
+        frame.addMouseListener(this);
 
         frame.getContentPane().setBackground(Color.BLACK);
 
@@ -75,13 +73,13 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
     }
     @Override
     public void onStartButtonClicked(String difficulty) {
-        System.out.println("Start button clicked with difficulty: " + difficulty);
         this.difficulty = difficulty;
         menuPanel.setVisible(false);
         Thread thread = new Thread(this);
         thread.start();
     }
     public void run() {
+        Threads++;
         long startTime = System.currentTimeMillis();
         long endTime = startTime + 60000; // 1 minute in milliseconds
         int delay = 3000;
@@ -100,10 +98,37 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
                 throw new RuntimeException(e);
             }
         }
+        Threads--;
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        frame.add(new Projectile(spaceship.getX()+33));
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 
     private class CollisionDetection extends Thread{
         public void run() {
+            Threads++;
             int hit = 0;
             while (hit < 3) {
                 for (Component component : frame.getContentPane().getComponents()) {
@@ -124,6 +149,7 @@ public class BlasterGame extends Thread implements MenuPanel.StartButtonClickLis
                     }
                 }
             }
+            Threads--;
         }
     }
 }
