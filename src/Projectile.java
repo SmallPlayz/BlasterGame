@@ -1,23 +1,23 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Projectile extends JLabel implements Runnable{
+public class Projectile extends JLabel /*implements Runnable*/{
     private int xPosition;
-    private final int yPosition = 500;
+    private int yPosition = 500;
     Projectile(int xPosition) {
         this.xPosition = xPosition;
 
         setBounds(xPosition, yPosition, 10, 10);
         setOpaque(true);
 
-        Thread thread = new Thread(this);
-        thread.start();
+        //Thread thread = new Thread(this);
+        //thread.start();
 
         CollisionDetection collisionDetection = new CollisionDetection();
         Thread collisionThread = new Thread(collisionDetection);
         collisionThread.start();
     }
-
+/*
     @Override
     public void run() {
         BlasterGame.Threads++;
@@ -30,7 +30,7 @@ public class Projectile extends JLabel implements Runnable{
             }
         }
         BlasterGame.Threads--;
-    }
+    }*/
     private class CollisionDetection extends Thread{
         public void run() {
             BlasterGame.Threads++;

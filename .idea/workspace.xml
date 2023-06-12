@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e923949-fadd-4aa7-a81b-db7ca480d743" name="Changes" comment="done for today!!">
+    <list default="true" id="7e923949-fadd-4aa7-a81b-db7ca480d743" name="Changes" comment="ye">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/x64.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HeadDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asteroid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/haarcascade_eye.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/haarcascade_frontalface_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/opencv-470.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/x64/opencv_java470.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/x86/opencv_java470.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlasterGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BlasterGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Asteroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Asteroid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BlasterGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlasterGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MenuPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projectile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +48,11 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/900ra/IdeaProjects/BlasterGame/src&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/900ra/IdeaProjects/BlasterGame/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -84,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685675649775</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ye">
+      <created>1686529713568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686529713568</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +123,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="I did stuff" />
     <MESSAGE value="done for today!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="done for today!!" />
+    <MESSAGE value="idk" />
+    <MESSAGE value="litterly magic bro" />
+    <MESSAGE value="ye" />
+    <option name="LAST_COMMIT_MESSAGE" value="ye" />
   </component>
 </project>

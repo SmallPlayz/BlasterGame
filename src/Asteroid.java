@@ -3,7 +3,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Asteroid extends JLabel implements Runnable{
@@ -23,11 +22,10 @@ public class Asteroid extends JLabel implements Runnable{
             setIcon(asteroidImageIcon);
         } catch (IOException e) {
             setOpaque(true);
-            throw new RuntimeException(e);
         }
 
-        Thread thread = new Thread(this);
-        thread.start();
+        //Thread thread = new Thread(this);
+        //thread.start();
     }
     public static BufferedImage resize(BufferedImage img, int newW, int newH) {
         Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);

@@ -4,6 +4,7 @@ import java.awt.*;
 public class MenuPanel extends JPanel {
     private JLabel titleLabel;
     private JComboBox<String> difficultyComboBox;
+    private JComboBox<String> inputComboBox;
     private JButton startButton;
     private StartButtonClickListener startButtonClickListener;
 
@@ -24,18 +25,24 @@ public class MenuPanel extends JPanel {
         difficultyComboBox.setBounds(150, 200, 100, 30);
         add(difficultyComboBox);
 
+        String[] inputOptions = {"Keyboard", "Mouse", "Camera"};
+        inputComboBox = new JComboBox<>(inputOptions);
+        inputComboBox.setBounds(150, 250, 100, 30);
+        add(inputComboBox);
+
         startButton = new JButton("Start");
         startButton.setBounds(150, 300, 100, 30);
         startButton.addActionListener(e -> {
             if (startButtonClickListener != null) {
                 String selectedDifficulty = (String) difficultyComboBox.getSelectedItem();
-                startButtonClickListener.onStartButtonClicked(selectedDifficulty);
+                String selectedMovement = (String) inputComboBox.getSelectedItem();
+                startButtonClickListener.onStartButtonClicked(selectedDifficulty, selectedMovement);
             }
         });
         add(startButton);
     }
 
     public interface StartButtonClickListener {
-        void onStartButtonClicked(String difficulty);
+        void onStartButtonClicked(String difficulty, String input);
     }
 }
